@@ -21,12 +21,12 @@ public class ejercicio_3 {
 
         if (promedio >=3) {
             System.err.println("NOMBRE  : " + nombre);
-            System.err.println("PROMEDIO:" + promedio);
+            System.err.println("PROMEDIO: " + promedio);
             System.err.println("ESTADO  : APROVADO");
         }
         else {
             System.err.println("NOMBRE  : " + nombre);
-            System.err.println("PROMEDIO:" + promedio);
+            System.err.println("PROMEDIO: " + promedio);
             System.err.println("ESTADO  : REPROBADO");
         }
 
