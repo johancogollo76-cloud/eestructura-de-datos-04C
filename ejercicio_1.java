@@ -23,11 +23,8 @@ public class ejercicio_1 {
         System.err.println("PRECIO C/U :" + precio);
         System.err.println("SUBTOTAL   :" + subtotal);
         System.err.println("IVA (19%)  :" + porcentaje);
-        System.err.println("TOTAL     :" + total);
+        System.err.println("TOTAL      :" + total);
 
-
-
-
-
+        teclado.close();
     }
 }
