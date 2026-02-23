@@ -2,6 +2,8 @@ import java.util.Scanner;
 public class ejercicio_5 {
     public static void main(String[] args) {
         Scanner tc = new Scanner(System.in);
+
+        System.out.println("hola mundo");
         System.err.println("escrba el nombre: ");
         String nombre = tc.nextLine();
 
