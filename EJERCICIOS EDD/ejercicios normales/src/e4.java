@@ -20,15 +20,17 @@ public class e4 {
         cc = 125;
         precio = 5500000.00;
         inicial = 78;
-        soat = false;
-
-
-
+        soat = true;
         System.out.println("PLACA: "+ placa);
         System.out.println("Año: "+ año);
         System.out.println("Cilindraje: "+ cc);
         System.out.println("Precio: "+ precio);
         System.out.println("Inicial del Color: "+ inicial);
-        System.out.println("SOAT: "+ soat);
+        if ( soat ==false){
+            System.out.println("el soat no esta vigente");
+        }
+        else {
+            System.out.println("el soat esta vigente");
+        }
     }
 }

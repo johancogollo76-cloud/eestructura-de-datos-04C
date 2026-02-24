@@ -9,11 +9,21 @@
 public class e3 {
     public static void main(String[] args) {
         
-        double celsius= 25;
+        boolean enAlarma;
+        double celsius= 50;
         double f = (celsius * 9/5) +32;
         double k = celsius + 273.15;
+        
 
-        System.err.println(celsius+"°C " +"= "+f+"°F "+ "= "+k+"°K");
+        if (celsius>=80) {
+            enAlarma = true;
+        }
+        else {
+            enAlarma = false;
+        }
+        System.out.println(celsius+"°C " +"= "+f+"°F "+ "= "+k+"°K");
+        System.out.println("enalarma: " + enAlarma);
     }
+    
     
 }

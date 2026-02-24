@@ -12,15 +12,16 @@ public class e2{
     public static void main(String[] args) {
         int precio= 2500;
         int cantidad= 3;
-        double descuento =10;
+        double des = 10;
 
         int subtotal = precio * cantidad;
         double porcentaje = 0.10;
-        double total = subtotal-porcentaje;
-        System.out.println("===RECIVO===");
+        double descuento = subtotal * porcentaje;
+        double total = subtotal-descuento;
+        System.out.println("===RECIBO===");
         System.out.println("PRECIO   : " + precio);
         System.out.println("CANTIDAD : "+  cantidad);
-        System.out.println("DESCUENTO: " + descuento+"%");
+        System.out.println("DESCUENTO: " + des+"%");
         System.out.println("SUBTOTAL : " + subtotal);
         System.out.println("TOTAL    : " + total);
 
