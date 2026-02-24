@@ -1,3 +1,16 @@
+// Pide al usuario los datos de su perfil: nombre, edad, ciudad, correo y si acepta términos y condiciones. Muestra un resumen indicando el tipo de dato que se usó para cada campo.
+
+// Datos de entrada: String, int, String, String, boolean
+
+// Salida esperada:
+
+// ========= Perfil creado =========
+// Nombre  (String)  : Ana Pérez
+// Edad    (int)     : 22
+// Ciudad  (String)  : Bogotá
+// Correo  (String)  : ana@mail.com
+// T&C     (boolean) : true
+
 import java.util.Scanner;
 public class ejercicio_4 {
     public static void main(String[] args) {
@@ -28,5 +41,4 @@ public class ejercicio_4 {
 
         tc.close();
     }
-    
 }
