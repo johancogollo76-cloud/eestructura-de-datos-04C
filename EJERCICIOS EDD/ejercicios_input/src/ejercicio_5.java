@@ -5,7 +5,7 @@
 // Clasificación:
 
 // IMC < 18.5 → Bajo peso
-// 18.5 ≤ IMC < 25 → Normal
+// 18.5 ≤ IMC < 25 → Normals
 // 25 ≤ IMC < 30 → Sobrepeso
 // IMC ≥ 30 → Obesidad
 // Datos de entrada: String nombre, double peso, double altura
