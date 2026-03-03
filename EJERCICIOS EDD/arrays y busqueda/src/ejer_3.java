@@ -7,7 +7,9 @@ public class ejer_3 {
         double [] temperatura = {34,32,35,37,39,32,31,};
         double max=0;
         for ( int i =0;i<temperatura.length;i++) {
-            if (temperatura[i]>max) {max = temperatura[i]; }
+            if (temperatura[i]>max) {
+                max = temperatura[i]; 
+            }
         }
         System.out.println("la temperatura maxima es: "+max);
     }
