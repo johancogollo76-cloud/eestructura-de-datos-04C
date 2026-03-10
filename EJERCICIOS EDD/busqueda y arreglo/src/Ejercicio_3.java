@@ -37,14 +37,7 @@ public class Ejercicio_3 {
         System.out.println("============ Resultado ============");
         System.out.print("Pesos ordenados: ");
         imprimirArreglo(pesos);
-
-
-
-
-
-
-
-
+        System.out.println("hell Sort es más rápido que Insertion Sort simple porque compara elementos que están lejos entre sí usando un salto Esto permite que los elementos se acerquen más rápido a su posición correcta antes de hacer las comparaciones finales");
         tc.close();
     }
     public static void imprimirArreglo(double[] arr) {
