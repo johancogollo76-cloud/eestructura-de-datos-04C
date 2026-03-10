@@ -29,7 +29,7 @@ public class Ejercicio_2 {
             }
             codigo[j+1]=clave;
             System.out.println();
-            System.out.println("paso "+(i+1));
+            System.out.println("paso "+(i));
             imprimirArreglo(codigo);
 
         }
