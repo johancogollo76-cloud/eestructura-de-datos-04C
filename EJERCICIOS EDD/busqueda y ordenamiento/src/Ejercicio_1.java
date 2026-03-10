@@ -13,12 +13,10 @@ public class Ejercicio_1 {
         int numero_corredores= tc.nextInt();
         double [] tiempo = new double[numero_corredores];
         for (int i =0;i<tiempo.length;i++) {
-            System.out.println("ingrese el corredor "+ (i+1));
+            System.out.println("ingrese el tiempo del corredor "+ (i+1));
             tiempo[i] =tc.nextDouble();
         }
 
-        System.out.println("ORIGINAL: ");
-        imprimir_arreglo(tiempo);
 
         int n =tiempo.length;
         for (int i=0;i<n-1;i++){
@@ -37,8 +35,8 @@ public class Ejercicio_1 {
         System.out.println("ORDENADOS: ");
         imprimir_arreglo(tiempo);
         System.out.println("medalla oro, 1 puesto con tiempo de: "+tiempo[0]);
-        System.out.println("medalla oro, 2 puesto con tiempo de: "+tiempo[1]);
-        System.out.println("medalla oro, 3 puesto con tiempo de: "+tiempo[2]);
+        System.out.println("medalla plata, 2 puesto con tiempo de: "+tiempo[1]);
+        System.out.println("medalla bronce, 3 puesto con tiempo de: "+tiempo[2]);
         tc.close();
     }
 

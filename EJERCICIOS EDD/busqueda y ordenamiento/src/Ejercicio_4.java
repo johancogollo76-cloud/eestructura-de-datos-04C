@@ -32,6 +32,7 @@ public class Ejercicio_4 {
         }
         System.out.println("ORDENADA ");
         imprimirArreglo(nombres);
+        System.out.println("El método compareToIgnoreCase() compara dos cadenas de texto sin tener en cuenta si las letras son mayúsculas o minúsculas, por eso si el resultado es mayor que 0, significa que el primer nombre es alfabéticamente mayor que el segundo,por lo que debe ir después en el orden alfabético,por eso es que en el goritmo de inserción se mueve el nombre para colocarlo en la posición correcta.");
         tc.close();
         
     }
