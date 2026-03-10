@@ -12,27 +12,22 @@ public class Ejercicio_2 {
         System.out.println("inhgrese la cantidad de libros: ");
         int cantidad_libros = tc.nextInt();
         int [] codigo= new int [cantidad_libros];  
-        for (int i=0;i<codigo.length;i++){
+        for (int i=0;i<cantidad_libros;i++){
             System.out.println("ingrese el codigo ISBN: ");
             codigo[i]=tc.nextInt();
-            
+                int clave=codigo[i];
+                int j =i-1;
+                while (j>=0 && codigo[j] > clave) {
+                    codigo[j+1]=codigo[j];
+                    j=j-1;
+                }
+                codigo[j+1]=clave;
+                System.out.println();
+                System.out.println("paso "+(i));
+                imprimirArreglo(codigo);
+    
         }
-        System.out.println("codigos actuales: ");
-        imprimirArreglo(codigo);
-        int n =codigo.length;
-        for (int i =1;i<n;i++){
-            int clave=codigo[i];
-            int j =i-1;
-            while (j>=0 && codigo[j] > clave) {
-                codigo[j+1]=codigo[j];
-                j=j-1;
-            }
-            codigo[j+1]=clave;
-            System.out.println();
-            System.out.println("paso "+(i));
-            imprimirArreglo(codigo);
-
-        }
+        
         tc.close();
     }
     public static void imprimirArreglo(int[] arr) {
