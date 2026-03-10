@@ -12,11 +12,11 @@ public class Ejercicio_4 {
         Scanner tc =new Scanner(System.in);
         System.out.println("cuantos estudiantes hay en la lista: ");
         int cantidad = tc.nextInt();
+        tc.nextLine();
         String [] nombres = new String [cantidad];
         for (int i=0;i<nombres.length;i++) {
             System.out.println("ingrese el nombre del estudiante "+ ( i+ 1 ) );
             nombres[i]=tc.nextLine();
-            tc.nextLine();
         }
         System.out.println("ORIGINAL");
         imprimirArreglo(nombres);

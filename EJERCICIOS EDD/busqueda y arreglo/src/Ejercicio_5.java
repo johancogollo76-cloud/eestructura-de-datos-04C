@@ -37,7 +37,7 @@ public class Ejercicio_5 {
                     minIdx = j;
                 }
             }
-            // Swap
+
             if (minIdx != i) {
             int temp = lista_1[minIdx];
             lista_1[minIdx] = lista_1[i];
@@ -60,6 +60,7 @@ public class Ejercicio_5 {
             
 
         }
+        System.out.println();
         System.out.println("ORGANIZADAS");
         System.out.println("lista 1 por seleccion");
         imprimirArreglo(lista_1);
