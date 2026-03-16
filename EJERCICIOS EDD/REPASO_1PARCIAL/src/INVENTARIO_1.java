@@ -1,4 +1,4 @@
-
+//sell short y busqueda binaria 
 import java.util.Scanner;
 public class INVENTARIO_1 {
 
@@ -24,7 +24,9 @@ public class INVENTARIO_1 {
 
         System.out.println("ingrese la cantidad de productos: ");
         int cantidad = tc.nextInt();
+
         Producto[] productos = new Producto[cantidad];
+
         for (int i =0; i<productos.length;i++) {
             System.out.println("ingrese el id del producto "+ (i+1));
             int id= tc.nextInt();
@@ -38,6 +40,7 @@ public class INVENTARIO_1 {
             productos[i] = new Producto(id, nombre, precio, stok);
 
         }
+        //shell short 
         int n = productos.length;
         for (int gap = n / 2; gap > 0; gap /= 2) {
             for (int i = gap; i < n; i++) {
@@ -57,7 +60,7 @@ public class INVENTARIO_1 {
 
         System.out.println("ingrese el id que desea buscar: ");
         int buscar = tc.nextInt();
-
+        //busqueda binaria
         int inicio = 0;
         int fin = productos.length - 1;
         boolean encontrado = false;
@@ -66,6 +69,9 @@ public class INVENTARIO_1 {
             int medio = (inicio + fin) / 2;
             if (productos[medio].id == buscar) {
                 System.out.println("el producto fue encontrado en la posicion: " + medio);
+                productos[medio].imprimir();
+                
+
                 encontrado = true;
                 break;
             } 
@@ -81,16 +87,8 @@ public class INVENTARIO_1 {
             System.out.println("producto no encontrado.");
         }
 
-
-
-
-
         tc.close();
     }
-
-
-    
-    
 
     public void imprimir(){
         System.out.println("id: "+ this.id+" nombre: "+ this.nombre+" precio: "+ this.precio+ " stok: "+this.stok);
@@ -99,3 +97,8 @@ public class INVENTARIO_1 {
 
     }
 }
+
+
+
+
+

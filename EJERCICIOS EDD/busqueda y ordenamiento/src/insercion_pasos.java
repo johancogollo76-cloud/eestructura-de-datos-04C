@@ -9,7 +9,7 @@
 // . El estudiante debe explicar en comentarios por qué este método es generalmente más rápido que la inserción simple al trabajar con elementos que están muy lejos de su posición final.
 // Resultado esperado: Mostrar el arreglo original y el arreglo final ordenado después de aplicar todas las fases de reducción de saltos.
 import java.util.Scanner;
-public class Ejercicio_3 {
+public class insercion_pasos {
     public static void main(String[] args) {
         Scanner tc =new Scanner(System.in);
         System.out.println("ingrese la cantidad de paquetes: ");

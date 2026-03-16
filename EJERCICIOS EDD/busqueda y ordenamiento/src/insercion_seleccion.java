@@ -9,7 +9,7 @@
 // Resultado esperado: El programa debe imprimir cuántos intercambios hizo Selección y cuántos movimientos hizo Inserción. El estudiante debe concluir cuál fue más eficiente para esos datos ingresados por el teclado.
 
 import java.util.Scanner;
-public class Ejercicio_5 {
+public class insercion_seleccion {
     public static void main(String[] args) {
         Scanner tc =new Scanner(System.in);
         System.out.println("ingrese la cantidad de datos: ");

@@ -5,7 +5,7 @@
 // Lógica de Selección: El algoritmo debe buscar el tiempo más bajo (el más rápido) en cada iteración y colocarlo al inicio.
 // Resultado esperado: El programa debe imprimir el arreglo totalmente ordenado y, adicionalmente, mostrar un mensaje claro indicando quién obtuvo el Oro (1er lugar), Plata (2do lugar) y Bronce (3er lugar).
 import java.util.Scanner;
-public class Ejercicio_1 {
+public class selecion_short {
     public static void main(String[] args) {
         Scanner tc = new Scanner(System.in);
         

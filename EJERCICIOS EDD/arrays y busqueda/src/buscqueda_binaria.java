@@ -5,7 +5,7 @@
 
 
 
-public class ejer_2 {
+public class buscqueda_binaria {
     public static void main(String[] args) {
 
         int[] clientes = new int[1000];

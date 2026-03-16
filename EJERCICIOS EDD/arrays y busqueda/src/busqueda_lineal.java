@@ -2,7 +2,7 @@
 
 // El Problema: Debes recorrer la lista para verificar si el producto existe y en qué posición de la estantería se encuentra.
 // Algoritmo a usar: Búsqueda Lineal. Es el ideal porque los productos en la estantería no tienen un orden numérico específico.
-public class ejer_1 {
+public class busqueda_lineal {
     public static void main(String[] args) throws Exception {
         boolean encontrado = false;
         double [] codigos = {23240,23424,234636,12313,45645,123123};
@@ -18,5 +18,11 @@ public class ejer_1 {
         if (!encontrado) {
             System.out.println("el valor no fue encontrado");
         }
+    }
+    public static void imprimirArreglo(int[] arr) {
+        for (int d : arr) {
+            System.out.print("[" + d + "] ");
+        }
+        System.out.println();
     }
 }

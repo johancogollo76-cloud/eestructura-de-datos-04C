@@ -3,7 +3,7 @@
 // El Problema: Cuando un socio digita su código, el sistema debe validar si el código está en la lista de "pagos al día". Si no está, se le niega la entrada.
 // Algoritmo a usar: Búsqueda Binaria. Es eficiente para buscar códigos numéricos en una lista que ya está organizada.
 import java.util.Scanner;
-public class ejer_4 {
+public class busqueda_binaria2 {
     public static void main(String[] args) {
         Scanner tc = new Scanner(System.in);
         boolean pasar = false;
