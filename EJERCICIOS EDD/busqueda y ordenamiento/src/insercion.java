@@ -6,7 +6,7 @@
 // Lógica de Inserción: A medida que el usuario ingresa un número, o una vez llenado el arreglo, el algoritmo debe simular el proceso de "insertar" el elemento comparándolo con los que ya están a su izquierda.
 // Visualización Paso a Paso: En cada ciclo del ordenamiento, el programa debe imprimir cómo va quedando el arreglo (ej: [10, 25, 5, 30] -> [5, 10, 25, 30]). Esto permite al estudiante ver cómo los elementos se desplazan para abrir espacio al nuevo valor.
 import java.util.Scanner;
-public class Ejercicio_2 {
+public class insercion {
     public static void main(String[] args) {
         Scanner tc = new Scanner(System.in);
         System.out.println("inhgrese la cantidad de libros: ");

@@ -1,3 +1,23 @@
+// jercicio 3: Control de Notas (Selección)
+// Objetivo: Gestionar las notas de un grupo, encontrar los valores extremos y ordenar la lista.
+// ¿Qué debes hacer?
+// 1. Entrada: Pide al usuario 5 notas (números decimales) por teclado.
+// 2. Estadísticas: Recorre el arreglo para encontrar cuál es la nota más alta y cuál la más baja del grupo.
+// 3. Ordenamiento: Ordena las notas de menor a mayor usando Selección (Selection Sort).
+// Ejemplo de lo que se debe ver en consola:
+// --- REGISTRO DE NOTAS ---
+// Ingrese nota del Estudiante 1: 3.5
+// Ingrese nota del Estudiante 2: 4.8
+// Ingrese nota del Estudiante 3: 2.0
+// ... (hasta completar las 5) ...
+// --- INFORME ACADÉMICO ---
+// La nota más ALTA del grupo es: 4.8
+// La nota más BAJA del grupo es: 2.0
+// --- LISTA DE NOTAS ORDENADA (Menor a Mayor) ---
+// [2.0, 3.0, 3.5, 4.2, 4.8]
+
+
+
 import java.util.Scanner;
 public class CONTROL_NOTAS {
     public static void main(String[] args) {
@@ -40,7 +60,7 @@ public class CONTROL_NOTAS {
             notas[indice_minimo]=notas[i];
             notas[i]=temp;
         }
-        System.out.println("LISTA DE NOTAS ORDENADAS");
+        System.out.println("    LISTA DE NOTAS ORDENADAS    ");
         imprimirArreglo(notas);
         tc.close();
     }

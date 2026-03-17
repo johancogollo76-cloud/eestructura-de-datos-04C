@@ -46,5 +46,4 @@ public class reto_2 {
         }
         tc.close();
     }
-    
 }

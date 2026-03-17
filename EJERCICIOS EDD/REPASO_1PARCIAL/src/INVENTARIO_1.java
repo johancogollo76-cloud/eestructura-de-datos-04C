@@ -1,4 +1,28 @@
-//sell short y busqueda binaria 
+// //sell short y busqueda binaria 
+// Ejercicio 1: Inventario "TecnoStore" (Shell Sort)
+// Objetivo: Registrar productos y ordenarlos por su ID para realizar búsquedas rápidas.
+// ¿Qué debes hacer?
+// 1. Clase: Crea una clase Producto con: id (int), nombre (String), precio (double) y stock (int).
+// 2. Entrada de Datos: Pide al usuario que ingrese los datos de 5 productos por teclado y guárdalos en un arreglo
+// Producto[] .
+// 3. Ordenamiento: Usa Shell Sort para ordenar los productos de menor a mayor según su id .
+// 4. Búsqueda: Pide un id al usuario y búscalo usando Búsqueda Binaria.
+// Ejemplo de lo que se debe ver en consola:
+// --- REGISTRO DE PRODUCTOS ---
+// Producto 1:
+// Ingrese ID: 105
+// Ingrese Nombre: Mouse
+// Ingrese Precio: 25.50
+// Ingrese Stock: 10
+// ... (se repite hasta completar los 5 productos) ...
+// --- INVENTARIO ORDENADO POR ID (Shell Sort) ---
+// ID: 101 | Nombre: Laptop | Precio: 850.0 | Stock: 5
+// ID: 102 | Nombre: Teclado | Precio: 45.0 | Stock: 12
+// ID: 105 | Nombre: Mouse | Precio: 25.5 | Stock: 10
+// ...
+// --- BÚSQUEDA DE PRODUCTO ---
+// Ingrese el ID a buscar: 102
+// >> PRODUCTO ENCONTRADO: Teclado - Precio: $45.0 - Stock: 12
 import java.util.Scanner;
 public class INVENTARIO_1 {
 
