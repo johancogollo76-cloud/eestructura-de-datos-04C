@@ -38,7 +38,7 @@ public class App {
                     break;
                 case 2:
                     System.out.println("IMPRIMIR");
-                    stan.imprimir_productos();
+                    stan.Imprimir();
             
                 default:
                     break;
