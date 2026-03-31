@@ -30,7 +30,7 @@ public class Orden {
         Vuelos actual = cabeza;
         Vuelos anterior = null;
 
-        while (actual != null && ! actual.numeroVuelos.equals(codigo)) {
+        while (actual != null && ! actual.numeroVuelo.equals(codigo)) {
             anterior = actual;
             actual = actual.siguiente;
         }
@@ -48,7 +48,7 @@ public class Orden {
         Vuelos iterando = cabeza;
         System.out.println(" Fila de Vuelos");
         while (iterando != null) {
-            System.out.println(iterando.numeroVuelos);
+            System.out.println(iterando.numeroVuelo);
             iterando = iterando.siguiente;
         }
     }
