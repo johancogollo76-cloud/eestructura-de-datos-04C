@@ -30,7 +30,7 @@ public class Orden {
         Vuelos actual = cabeza;
         Vuelos anterior = null;
 
-        while (actual != null && !actual.numeroVuelos.equals(codigo)) {
+        while (actual != null && ! actual.numeroVuelos.equals(codigo)) {
             anterior = actual;
             actual = actual.siguiente;
         }

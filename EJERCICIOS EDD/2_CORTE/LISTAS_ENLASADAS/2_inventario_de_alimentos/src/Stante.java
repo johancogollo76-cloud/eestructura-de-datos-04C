@@ -27,12 +27,12 @@ public class Stante{
         System.out.println("Productos por vencer");
         while (iterando.siguiente != null) {
             if (iterando.diasParaVencer<5) {
-                System.out.println(iterando.nombre + " vence en " + iterando.diasParaVencer);
+                System.out.println(iterando.nombre + "vence: " + iterando.diasParaVencer);
             }
             iterando=iterando.siguiente;
         }
         if (iterando.diasParaVencer < 5) {
-            System.out.println(iterando.nombre + " vence en " + iterando.diasParaVencer);
+            System.out.println(iterando.nombre + "vence: " + iterando.diasParaVencer);
         }
     }
 }
