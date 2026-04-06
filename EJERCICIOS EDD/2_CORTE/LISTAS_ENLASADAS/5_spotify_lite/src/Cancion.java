@@ -1,11 +1,11 @@
-public class Cansion {
+public class Cancion {
     String titulo;
     String artista;
     int duracion_segundos;
     String genero;
-    Cansion siguiente;
+    Cancion siguiente;
 
-    public Cansion(String titulo,String artista,int duracion_segundos,String genero){
+    public Cancion(String titulo,String artista,int duracion_segundos,String genero){
         this.titulo=titulo;
         this.artista=artista;
         this.duracion_segundos=duracion_segundos;

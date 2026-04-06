@@ -17,7 +17,8 @@ public class App {
             System.out.println("MENUUUUUUU");
             System.out.println("1.  agregar al inicio ");
             System.out.println("2.  agregar al final");
-            System.out.println("3.  mostrar el tiempo ");
+            System.out.println("3.  suma del tiempo ");
+            System.out.println("4.  mostrar lista");
             System.out.println("0.  salir");
             System.out.println("==================\n");
             opc=tc.nextInt();
@@ -35,7 +36,7 @@ public class App {
                     System.out.println("ingrese el genero: ");
                     String genero=tc.next();
 
-                    Cansion musica= new Cansion(titulo, artista, duracion_segundos, genero);
+                    Cancion musica= new Cancion(titulo, artista, duracion_segundos, genero);
                     lista.agregar_al_inicio(musica);
                     break;
                 case 2:
@@ -50,8 +51,18 @@ public class App {
                     System.out.println("ingrese el genero: ");
                     String genero2=tc.next();
 
-                    Cansion musica2= new Cansion(titulo2, artista2, duracion_segundos2, genero2);
+                    Cancion musica2= new Cancion(titulo2, artista2, duracion_segundos2, genero2);
                     lista.agregar_al_final(musica2);
+                    break;
+                case 3:
+                    System.out.println("sumar tiempo");
+                    lista.sumar_canciones();
+                    break;
+
+                case 4:
+                    System.out.println("mostrar lista");
+                    lista.mostrar_lista();
+                    break;
             
                 default:
                     break;
