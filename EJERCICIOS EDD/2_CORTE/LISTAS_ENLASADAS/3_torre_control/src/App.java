@@ -38,7 +38,7 @@ public class App {
                     Vuelos vuelo = new Vuelos(numeroVuelo, aerolinea, combustible, pasajeros);
 
                     if (combustible < 10) {
-                        fila.insertarAlInicio(vuelo)
+                        fila.insertarAlInicio(vuelo);
                         System.out.println("Vuelo con bajo combustible agregado al inicio.");
                     } else {
                         fila.agregarVuelo(vuelo);  // Cambiado a nombre estándar
