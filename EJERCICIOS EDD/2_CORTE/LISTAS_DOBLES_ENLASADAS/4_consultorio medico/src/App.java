@@ -11,7 +11,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner tc=new Scanner(System.in);
         int opcion;
-        Atencion consultorio = new Consultorio();
+        Atencion consultorio = new Atencion();
 
         do {
             System.out.println("\n==============================================");
@@ -33,7 +33,7 @@ public class App {
                     String nombre = tc.next();
 
                     System.out.println("Ingrese edad:");
-                    String edad = tc.next();
+                    int edad = tc.nextInt();
 
                     System.out.println("Ingrese nivel de urgencia (1-5):");
                     int urgencia = tc.nextInt();

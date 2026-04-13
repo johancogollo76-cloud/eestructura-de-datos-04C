@@ -5,6 +5,7 @@ public class Navegador {
         this.cabeza=null;
         this.cola=null;
     }
+    
 
     public void agregar_al_final(Pestaña nuevPestaña){
         if(cabeza==null){
