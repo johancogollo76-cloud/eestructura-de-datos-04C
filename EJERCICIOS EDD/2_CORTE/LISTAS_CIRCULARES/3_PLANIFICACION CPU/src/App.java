@@ -13,7 +13,7 @@ public class App {
         Lista_procesos lista=new Lista_procesos();
         int opc;
         do {
-            System.out.println("\n===== Planificador de CPU (Algoritmo Round Robin)=====");
+            System.out.println("\n***********MENUU*******");
             System.out.println("1. Agregar proceso");
             System.out.println("2. Ejecutar procesos");
             System.out.println("3. Mostrar procesos");
@@ -48,7 +48,7 @@ public class App {
                     lista.mostrar_procesos();
                     break;
                 case 0:
-                    System.out.println("Adios...");
+                    System.out.println("SALIENDO");
                     break;
                 default:
                     System.out.println("Opción invalida");
