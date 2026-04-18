@@ -17,7 +17,7 @@ public class App {
             System.out.println("\n==============================================");
             System.out.println("                gestor de mesas                ");
             System.out.println("==============================================");
-            System.out.println("  [1] Agregar anuncio.");
+            System.out.println("  [1] Agregar reerva.");
             System.out.println("  [2] atender .");
             System.out.println();
             System.out.println("  [0] Salir");
@@ -46,9 +46,21 @@ public class App {
                     System.out.println("        ATENDER          ");
                     System.out.println("=========================");
                     orden.atenderSiguiente();
-                break;
-            
+                    break;
+
+                case 3: 
+                    System.out.println("========================="); 
+                    System.out.println(" SIMULACIÓN ");
+                    System.out.println("=========================");
+                    System.out.println("cantidad de turnos");
+                    int cantidad=tc.nextInt();
+                    for(int i = 0; i < cantidad; i++){ 
+                        System.out.println("\n--- Turno " + (i+1) + " ---");
+                        orden.atenderSiguiente(); 
+                    }
+                    break;
                 default:
+                    System.out.println("opcion no valida");
                     break;
             }
         }while(opc!=0);

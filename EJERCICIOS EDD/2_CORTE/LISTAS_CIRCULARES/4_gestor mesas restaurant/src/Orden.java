@@ -27,7 +27,7 @@ public class Orden {
         Grupo temp = cabeza;
 
         do{
-            System.out.print(temp.nombreReserva + " -> ");
+            System.out.print(temp.nombre_reserva + " -> ");
             temp = temp.siguiente;
         }while(temp != cabeza);
 
@@ -43,10 +43,10 @@ public class Orden {
         Grupo actual = cabeza;
 
         // Mostrar info
-        System.out.println("Atendiendo grupo: " + actual.nombreReserva +" | Personas: " + actual.numeroDePersonas +" | VIP: " + actual.esVip);
+        System.out.println("Atendiendo grupo: " + actual.nombre_reserva +" | Personas: " + actual.numero_personas +" | VIP: " + actual.es_vip);
 
         if(cabeza == cola){
-            if(actual.esVip){
+            if(actual.es_vip){
                 System.out.println("Es VIP, permanece en lista");
             }else{
                 cabeza = null;
@@ -55,11 +55,11 @@ public class Orden {
             return;
         }
 
-        if(actual.esVip){
+        if(actual.es_vip){
             cabeza = cabeza.siguiente;
             cola.siguiente = actual;  
-            cola = actual;            
-            cola.siguiente = cabeza;  
+            actual.siguiente = cabeza;            
+            cola=actual;
         }
         else{
             cabeza = cabeza.siguiente;
