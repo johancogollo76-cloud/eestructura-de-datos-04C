@@ -24,51 +24,53 @@ public class Enfrentamientos {
             return;
         }
 
-        Equipo[] equipos = new Equipo[6];
-        Equipo actual = cabeza;
+        Equipo[] eq = new Equipo[6];
+        Equipo temp = cabeza;
 
         for(int i = 0; i < 6; i++){
-            equipos[i] = actual;
-            actual = actual.siguiente;
+            eq[i] = temp;
+            temp = temp.siguiente;
         }
 
-        int jornadas = 5; 
-
-        for(int j = 0; j < jornadas; j++){
+        // 5 jornadas
+        for(int j = 0; j < 5; j++){
             System.out.println("\nJORNADA " + (j+1));
 
+            // 3 partidos
             for(int i = 0; i < 3; i++){
-                Equipo local = equipos[i];
-                Equipo visitante = equipos[5 - i];
+                Equipo local = eq[i];
+                Equipo visitante = eq[5 - i];
 
                 System.out.println(local.nombre + " vs " + visitante.nombre);
 
+                // Simulación simple
                 local.puntos += 3;
-                local.golesFavor += 1;
             }
 
-            Equipo ultimo = equipos[5];
+            
+            Equipo ultimo = eq[5];
 
             for(int i = 5; i > 1; i--){
-                equipos[i] = equipos[i-1];
+                eq[i] = eq[i-1];
             }
 
-            equipos[1] = ultimo;
+            eq[1] = ultimo;
         }
 
-        for(int i = 0; i < equipos.length; i++){
-            for(int k = 0; k < equipos.length - 1; k++){
-                if(equipos[k].puntos < equipos[k+1].puntos){
-                    Equipo aux = equipos[k];
-                    equipos[k] = equipos[k+1];
-                    equipos[k+1] = aux;
+        for(int i = 0; i < 6; i++){
+            for(int k = 0; k < 5; k++){
+                if(eq[k].puntos < eq[k+1].puntos){
+                    Equipo aux = eq[k];
+                    eq[k] = eq[k+1];
+                    eq[k+1] = aux;
                 }
             }
         }
 
-        System.out.println("\nTABLA DE POSICIONES:");
-        for(Equipo e : equipos){
+        System.out.println("\nTABLA FINAL:");
+        for(Equipo e : eq){
             System.out.println(e.nombre + " - " + e.puntos + " pts");
         }
+    }   
 }
-}
+

@@ -31,9 +31,8 @@ public class App {
                     System.out.println("       AGREGAR           ");
                     System.out.println("=========================");
 
-                    System.out.print("Cantidad de equipos: ");
-                    int n = tc.nextInt();
-                    for(int i = 0; i < n; i++){
+                    System.out.print("registro de 6 equipos ");
+                    for(int i = 0; i < 6; i++){
                         System.out.println("\nEquipo #" + (i+1));
                         System.out.println("    NOMRBE equipo:");
                         String nombre=tc.next();
