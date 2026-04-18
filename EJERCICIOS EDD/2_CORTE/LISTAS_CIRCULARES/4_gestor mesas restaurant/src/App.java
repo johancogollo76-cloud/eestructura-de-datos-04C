@@ -5,9 +5,55 @@
 // El Problema: Los grupos normales se atienden y salen de la lista. Los grupos VIP, al ser atendidos, vuelven al final de la lista circular para una segunda ronda de atención. El sistema debe atender un grupo por turno.
 // Reto: Implementa el método atenderSiguiente() que tome el grupo de la cabeza, muestre su información, y si esVip == true, lo reinserté al final; si no, lo elimine. Muestra el estado de la lista después de cada atención. Llama al método 6 veces para simular la dinámica del restaurante.
 
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        
+        Scanner tc = new Scanner(System.in);
+        Orden orden=new Orden();
+
+        int opc;
+        do{
+            System.out.println("\n==============================================");
+            System.out.println("                gestor de mesas                ");
+            System.out.println("==============================================");
+            System.out.println("  [1] Agregar anuncio.");
+            System.out.println("  [2] atender .");
+            System.out.println();
+            System.out.println("  [0] Salir");
+            System.out.println("==============================================");
+            System.out.print("Elige una opción: ");
+            opc =tc.nextInt();
+            System.out.println();
+            switch (opc) {
+                case 1:
+                    System.out.println("=========================");
+                    System.out.println("       AGREGAR           ");
+                    System.out.println("=========================");
+                    System.out.println("    NOMRBE RESERVA:");
+                    String nombre=tc.next();
+                    System.out.println("    NUMERO DE PERSONAS: ");
+                    int numeroDePersonas=tc.nextInt();
+                    System.out.println("    ES VIP?: ");
+                    boolean esVip=tc.nextBoolean();
+                    System.out.println("    MINUTOS ESPERANDO: ");
+                    int minutosEsperando=tc.nextInt();
+                    Grupo grupos=new Grupo(nombre, numeroDePersonas, esVip, minutosEsperando);
+                    orden.agregar(grupos);                    
+                    break;
+                case 2:
+                    System.out.println("=========================");
+                    System.out.println("        ATENDER          ");
+                    System.out.println("=========================");
+                    orden.atenderSiguiente();
+                break;
+            
+                default:
+                    break;
+            }
+        }while(opc!=0);
+
+
+        tc.close();
     }
 }
