@@ -1,16 +1,15 @@
 public class Cancion {
     String titulo;
     String artista;
-    int duracion_segundos;
+    int duracion;
     String genero;
     Cancion siguiente;
     Cancion anterior;
 
-    public Cancion(String titulo,String artista,int duracion_segundos,String genero){
+    public Cancion(String titulo, String artista, int duracion, String genero){
         this.titulo=titulo;
         this.artista=artista;
-        this.duracion_segundos=duracion_segundos;
-        this.genero=genero;
+        this.duracion=duracion;
         this.siguiente=null;
         this.anterior=null;
     }

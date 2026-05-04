@@ -2,105 +2,109 @@ public class Galeria {
     Foto cabeza;
     Foto cola;
     Foto actual;
+
     public Galeria(){
-        this.cabeza=null;
+        this.cabeza = null;
+        this.actual = null;
         this.cola=null;
-        this.actual=null;
     }
 
-    public void agregar(String titulo,String fecha,boolean es_favorita ){
-        Foto nueva =new Foto(titulo, fecha, es_favorita);
+    public void agregar(String titulo, String fecha, boolean esFavorita){
+        Foto nueva = new Foto(titulo, fecha, esFavorita);
+
         if (cabeza == null) {
             nueva.siguiente = nueva;
             nueva.anterior = nueva;
             cabeza = nueva;
-            cola = nueva;
-            actual= nueva;
+            actual = nueva;
+            cola=nueva;
         } else {
+            cola = cabeza.anterior;
+
             cola.siguiente = nueva;
             nueva.anterior = cola;
+
             nueva.siguiente = cabeza;
             cabeza.anterior = nueva;
-            cola = nueva;
-        }
-    }
-    public void siguiente() {
-        if (actual != null && actual.siguiente != null) {
-            actual = actual.siguiente;
-        }
-    }
-    public void anterior() {
-        if (actual != null && actual.anterior != null) {
-            actual = actual.anterior;
-        }
-    }
-    public void toggleFavorita() {
-        if (actual != null) {
-            actual.es_favorita = !actual.es_favorita;
         }
     }
 
+    public void siguiente() {
+        if (actual != null) {
+            actual = actual.siguiente;
+            System.out.println(actual.titulo);
+            System.out.println(actual.es_favorita);
+        }
+    }
+
+    public void anterior() {
+        if (actual != null) {
+            actual = actual.anterior;
+            System.out.println(actual.titulo); 
+            System.out.println(actual.es_favorita);
+        }
+    }
+
+    // ✅ Marcar o desmarcar como favorita
+    public void toggleFavorita() {
+        if (actual != null) {
+            actual.es_favorita = !actual.es_favorita; // invierte el valor
+        }
+    }
 
     public void eliminarActual() {
 
         if (actual == null) return;
 
-        //único nodo
-        if (cabeza == cola) {
+        // Caso 1: solo hay una foto
+        if (actual.siguiente == actual) {
             cabeza = null;
-            cola = null;
             actual = null;
             return;
         }
 
-        // eliminar cabeza
+        // Guardar referencias
+        Foto anterior = actual.anterior;
+        Foto siguiente = actual.siguiente;
+
+        // Reconectar nodos (saltarse el actual)
+        anterior.siguiente = siguiente;
+        siguiente.anterior = anterior;
+
+        // Si eliminamos la cabeza, la movemos
         if (actual == cabeza) {
-            cabeza = cabeza.siguiente;
-            cabeza.anterior = null;
-            actual = cabeza;
-            return;
+            cabeza = siguiente;
         }
 
-        // eliminar cola
-        if (actual == cola) {
-            cola = cola.anterior;
-            cola.siguiente = null;
-            actual = cola;
-            return;
-        }
-
-        // intermedio
-        Foto ant = actual.anterior;
-        Foto sig = actual.siguiente;
-
-        ant.siguiente = sig;
-        sig.anterior = ant;
-
-        actual = sig; // siguiente
+        // El puntero actual pasa a la siguiente foto
+        actual = siguiente;
     }
 
-
     public void mostrarGaleria() {
+        if (cabeza == null) {
+            System.out.println("Galería vacía");
+            return;
+        }
 
-        Foto temp = cabeza;
+        System.out.println("\n----- GALERÍA -----");
 
-        System.out.println("\n ----- GALERIA -----");
+        Foto cursor = cabeza;
 
-        while (temp != null) {
-
+        do {
             String marca = "";
 
-            if (temp == actual) {
-                marca += "[▶] ";
+            if (cursor == actual) {
+                marca += "[>>] ";
             }
 
-            if (temp.es_favorita) {
-                marca += "[★] ";
+            if (cursor.es_favorita) {
+                marca += "[FAV] ";
             }
 
-            System.out.println(marca + temp.titulo + " - " + temp.fecha);
+            System.out.println(marca + cursor.titulo + " - " + cursor.fecha);
 
-            temp = temp.siguiente;
-        }
+            cursor = cursor.siguiente;
+
+        } while (cursor != cabeza);
     }
 }

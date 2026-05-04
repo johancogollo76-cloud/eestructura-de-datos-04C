@@ -3,7 +3,7 @@
 
 // La Clase Foto (Nodo): Debe contener titulo (String), fecha (String) y esFavorita (boolean).
 // El Problema: La galería mantiene un puntero actual a la foto que se está viendo. Navegar con "siguiente" o "anterior" mueve ese puntero. Marcar como favorita simplemente alterna el campo esFavorita de la foto actual. Eliminar la foto actual desconecta el nodo en O(1) y mueve actual a la siguiente.
-// Reto: Implementa los métodos siguiente(), anterior(), toggleFavorita(), eliminarActual() y mostrarGaleria(). mostrarGaleria() recorre todas las fotos marcando con [★] las favoritas y con [▶] la foto actual. Simula: carga 5 fotos, avanza dos veces, marca la actual como favorita, retrocede una, elimina esa foto y muestra el estado final de la galería.
+// Reto: Implementa los métodos siguiente(), anterior(), toggleFavorita(), eliminarActual() y mostrarGaleria(). mostrarGaleria() recorre todas las fotos marcando con [★] las favoritas y con [▶] la foto actual. Simula: carga 5 fotos, avanza dos veces, macra la actual como favorita, retrocede una, elimina esa foto y muestra el estado final de la galería.
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class App {
             System.out.println("6. Mostrar galería");
             System.out.println("7. cargar fotos ejemplos");
             System.out.println("0. Salir");
-            System.out.print("Seleccione una opción: ");
+            System.out.println("Seleccione una opción: ");
             System.out.println("=======================================================");
             opcion = tc.nextInt();
             tc.nextLine();
@@ -40,6 +40,7 @@ public class App {
 
                     System.out.print("Fecha: ");
                     String fecha = tc.nextLine();
+
 
                     galeria.agregar(titulo, fecha, false);
                     System.out.println("Foto agregada");
@@ -69,11 +70,12 @@ public class App {
                     galeria.mostrarGaleria();
                     break;
                 case 7:
-                    galeria.agregar("Playa", "2024-01-10",true);
-                    galeria.agregar("Montaña", "2024-01-15",true);
-                    galeria.agregar("Ciudad", "2024-02-01",true);
+                    galeria.agregar("Playa", "2024-01-10",false);
+                    galeria.agregar("Montaña", "2024-01-15",false);
+                    galeria.agregar("Ciudad", "2024-02-01",false);
                     galeria.agregar("Familia", "2024-02-10",false);
                     galeria.agregar("Amigos", "2024-03-05",false);
+                    break;
 
 
                 case 0:

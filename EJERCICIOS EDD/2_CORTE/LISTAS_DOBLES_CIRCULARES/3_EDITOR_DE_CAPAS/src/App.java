@@ -43,7 +43,7 @@ public class App {
                     System.out.println("TIPO: ");
                     String tipo =tc.next();
                     editor.agregar(nombre, visible, tipo);
-                    System.out.println("CAPA"+ nombre+" AGREGADO ");
+                    System.out.println("CAPA "+ nombre+" AGREGADO ");
                     break;
 
                 case 2:
