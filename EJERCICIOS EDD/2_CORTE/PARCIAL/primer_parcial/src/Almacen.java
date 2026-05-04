@@ -26,14 +26,16 @@ public class Almacen {
         
         Producto actual=cabeza;
         while(actual!=null){
-            if (actual.codigo==codigobus){
-                cantidadNueva= actual.cantidad;
+            if (actual.codigo.equalsIgnoreCase(codigobus)){
+                actual.cantidad +=cantidadNueva;
                 actual=actual.referenProducto;
+                System.out.println("cantidad actualizada");
+                System.out.println("cantidad nueva "+ actual.cantidad);
+                break;
             }
             
         }
-        System.out.println("cantidad actualizada");
-        System.out.println("cantidad nueva "+ cantidadNueva);
+        
         
         
 
