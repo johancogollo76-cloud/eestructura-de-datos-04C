@@ -9,4 +9,8 @@ public class Camion {
         this.cargaToneladas=cargaToneladas;
         this.siguiente=null;
     }
+    @Override
+    public String toString(){
+        return "[" + placa + " | " + conductor + " | " + cargaToneladas+ "]";
+    }
 }

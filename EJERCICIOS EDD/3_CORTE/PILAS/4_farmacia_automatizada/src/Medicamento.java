@@ -10,4 +10,8 @@ public class Medicamento {
         this.diasParaVencer=diasParaVencer;
         this.siguiente=null;
     }
+    @Override
+    public String toString(){
+        return "[" + nombre + " | " + lote + " | " + diasParaVencer+ "]";
+    }
 }
